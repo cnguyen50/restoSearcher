@@ -6,6 +6,8 @@ import SearchBar from '../components/SearchBar'
 const SearchScreen = () => {
   const [term, setTerm] = useState("");
 
+  
+  
   return (
     <View>
       <SearchBar 
