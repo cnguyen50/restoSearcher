@@ -4,7 +4,7 @@ import { FontAwesome } from '@expo/vector-icons'
 import { ThemeContext } from 'react-navigation';
 
 
-const SearchBar = ({ term, onTermChange }) => {
+const SearchBar = ({ term, onTermChange, onTermSubmit }) => {
   return (
     <View style={styles.backgroundStyle}>
       <FontAwesome name="search" style={styles.iconStyle}/>
@@ -14,8 +14,9 @@ const SearchBar = ({ term, onTermChange }) => {
         style={styles.inputStyle} 
         placeholder="Search" 
         value={term}
-        onChangeText={newTerm => onTermChange(newTerm)}
-        />
+        onChangeText={onTermChange}
+        onEndEditing={onTermSubmit}
+      />
     </View>
   )
 };
