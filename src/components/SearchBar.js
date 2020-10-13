@@ -7,7 +7,7 @@ import { ThemeContext } from 'react-navigation';
 const SearchBar = () => {
   return (
     <View style={styles.backgroundStyle}>
-      <FontAwesome name="search" size={30}/>
+      <FontAwesome name="search" style={styles.iconStyle}/>
       <TextInput style={styles.inputStyle} placeholder="Search" />
     </View>
   )
@@ -15,6 +15,7 @@ const SearchBar = () => {
 
 const styles = StyleSheet.create({
   backgroundStyle: {
+    marginTop: 10,
     backgroundColor: '#F0EEEE',
     height: 50,
     borderRadius: 5,
@@ -22,9 +23,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   inputStyle: {
-    borderColor: 'black',
-    borderWidth: 1,
+    fontSize: 18,
     flex: 1
+  },
+  iconStyle: {
+    fontSize: 35,
+    alignSelf: 'center',
+    marginHorizontal: 10
   }
 })
 
